@@ -1,0 +1,22 @@
+{
+    "name": "rokezzz/module-order-type",
+    "version": "1.0.0",
+    "description": "This module is responsible for adding custom features to Order",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*",
+        "magento/module-sales": "103.0.*",
+        "php": ">=7.4"
+    },
+    "license": [
+        "Proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Rokezzz\\OrderType\\": ""
+        }
+    }
+}

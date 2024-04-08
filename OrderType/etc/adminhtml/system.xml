@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="rokezzz_modules" translate="label" class="rokezzz-tab" sortOrder="100">
+            <label>Rokezzz</label>
+        </tab>
+        <section id="rokezzz_modules" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <tab>rokezzz_modules</tab>
+            <resource>Rokezzz_OrderType::config</resource>
+            <label>Order Type</label>
+            <group id="order_type" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="enabled" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="map" translate="label" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Order Types Mapping</label>
+                    <frontend_model>Rokezzz\OrderType\Block\Adminhtml\Form\Field\OrderTypeMap</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

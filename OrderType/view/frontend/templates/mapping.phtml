@@ -1,0 +1,28 @@
+<?php
+/** @var Escaper $escaper */
+/** @var OrderType $viewModel */
+
+use Magento\Framework\Escaper;
+use Rokezzz\OrderType\ViewModel\OrderType;
+
+$viewModel = $block->getViewModel();
+?>
+
+<?php if ($viewModel->isOrderTypeEnabled()): ?>
+    <div id="order-types-div">
+        <label for="order_type"> Order Type:
+        <select name="order_type" id="order_type" style="max-width:200px;">
+            <?php foreach ($viewModel->getOrderTypeMapping() as $key => $label): ?>
+                <option value="<?= $escaper->escapeHtml($key) ?>"><?= $escaper->escapeHtml($label); ?></option>
+            <?php endforeach; ?>
+        </select>
+        </label>
+    </div>
+    <script type="text/x-magento-init">
+        {
+            "#order_type": {
+                "Rokezzz_OrderType/js/order-type-select": {}
+            }
+        }
+    </script>
+<?php endif; ?>

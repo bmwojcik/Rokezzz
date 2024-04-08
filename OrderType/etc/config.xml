@@ -1,0 +1,10 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <rokezzz_modules>
+            <order_type>
+                <enabled>1</enabled>
+                <map>{"_1712512411086_86":{"order_type":"Standardowe","id":"1"},"_1712512420516_516":{"order_type":"Ekspozycyjne","id":"2"},"_1712512425148_148":{"order_type":"Testowe","id":"3"}}</map>
+            </order_type>
+        </rokezzz_modules>
+    </default>
+</config>

@@ -1,0 +1,17 @@
+{
+    "sales_order": {
+        "column": {
+            "order_type": true
+        }
+    },
+    "sales_order_grid": {
+        "column": {
+            "order_type": true
+        }
+    },
+    "quote": {
+        "column": {
+            "order_type": true
+        }
+    }
+}
